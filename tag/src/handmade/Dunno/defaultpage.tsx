@@ -11,7 +11,7 @@ class BasicBoxClass extends React.Component {
         {/* <HeaderComponentClass /> */}
         <HeaderComponentClass />
         <div className='MiddleCapsule Capsule1'>
-          <h1 className='blue'>
+          <h1 className='blue WhiteText'>
             G
           </h1>
         </div>

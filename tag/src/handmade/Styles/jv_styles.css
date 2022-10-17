@@ -45,15 +45,9 @@
   margin: var(--defaultMargin);
 }
 
-
-.green {
-  color: green;
-  background-color: green;
-}
-
-.blue {
-  color: blue;
-  background-color: blue;
+.WhiteText {
+  color: white;
+  background-color: #030033;
 }
 
 .BasicBox {
@@ -86,12 +80,43 @@
 }
 
 .HeaderCapsule {
-  background-color: var(--indentLevel2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.WhiteText {
-  color: white;
+.HeaderLogo {
+  display: flex;
 }
+
+.HeaderLogoText {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderLogoImage {
+  aspect-ratio: 1;
+  width: 50px;
+}
+
+.HeaderButtonsCapsule {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.HeaderButton {
+  border-color: #263238;
+  width: max-content;
+  height: 20px;
+  border-radius: 20px;
+  border-width: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px;
+}
+
 
 /* import { StyleSheet } from 'react';
 
