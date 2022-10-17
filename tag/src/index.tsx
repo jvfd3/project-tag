@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ReportHandler } from 'web-vitals';
-import BasicBox from './handmade/Dunno/defaultpage';
-import './handmade/Styles/jv_styles.css';
+import BasicBoxClass from './handmade/Dunno/defaultpage';
+import './handmade/styles/jv_styles.css';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
@@ -21,7 +21,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BasicBox/>
+    <BasicBoxClass />
   </React.StrictMode>
 );
 
