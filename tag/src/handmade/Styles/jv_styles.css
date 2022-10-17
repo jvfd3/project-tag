@@ -1,0 +1,57 @@
+.green {
+    color: green;
+    background-color: green;
+}
+
+.blue {
+  color: blue;
+  background-color: blue;
+}
+
+.black_bg {
+    background-color: black;
+    height: 100%;
+    margin: 0px;
+    orientation: portrait;
+    flex-direction: row;
+
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    max-width: 2000px;
+
+}
+
+
+/* import { StyleSheet } from 'react';
+
+const style_a = StyleSheet.create({
+    index_container: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+    },
+})
+
+const style_b = StyleSheet.create({
+    test_switch_names: {
+        paddingBottom: 10,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // flex: 0,
+        // alignSelf: 'flex-start',
+    },
+    test_white_text: {
+        color: 'white',
+    }
+})
+
+
+const styles_concat = StyleSheet.create({
+    ...style_a,
+    ...style_b,
+})
+
+const flattened_test_styles = StyleSheet.flatten(styles_concat)
+export default flattened_test_styles */
