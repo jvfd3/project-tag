@@ -5,7 +5,7 @@ import React from 'react';
 class HeaderComponentClass extends React.Component {
   render() {
     return (
-      <div className='HeaderCapsule' >
+      <div className='HeaderCapsule Capsule1' >
         <h1 className='green'>
           B
         </h1>

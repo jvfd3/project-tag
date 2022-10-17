@@ -7,10 +7,10 @@ import HeaderComponentClass from '../components/header';
 class BasicBoxClass extends React.Component {
   render() {
     return (
-      <div className='black_bg' >
+      <div className='BasicBox Capsule0' >
         {/* <HeaderComponentClass /> */}
         <HeaderComponentClass />
-        <div className=''>
+        <div className='MiddleCapsule Capsule1'>
           <h1 className='blue'>
             G
           </h1>

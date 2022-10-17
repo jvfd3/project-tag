@@ -2,23 +2,19 @@
 
 import React from 'react';
 
-const estilo = {
-    red: {
-        color: 'red',
-        backgroundColor: 'red'
-    },
-}
-
 class FooterComponentClass extends React.Component {
-    render() {
-        return (
-            <div className='FooterCapsule' style={estilo.red}>
-                <h1 className=''>
-                    R
-                </h1>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className='FooterCapsule Capsule1'>
+        <p className='FooterText WhiteText'>
+          Este é o rodapé de informações
+        </p>
+        <p className='FooterText WhiteText'>
+          Este código está sendo desenvolvido pelo aluno João Vítor Fernandes Dias que o está chamando de "TAG", ou "Projeto Tag". Este código está sendo desenvolvido como parte da disciplina Paradigma Orientado a Objetos para Desenvolvimento de Software, ministrada pelo Professor Doutor Ausberto Silverio Castro Vera.
+        </p>
+      </div>
+    );
+  }
 }
 
 export default FooterComponentClass;
