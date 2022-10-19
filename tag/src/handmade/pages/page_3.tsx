@@ -1,16 +1,16 @@
-// Main Page
+// add tag page
 
 import React from 'react';
-class Placeholder1 extends React.Component {
+class Placeholder3 extends React.Component {
     render() {
         return (
             <div className='Capsule1 MiddleCapsule'>
                 <h1 className='WhiteText'>
-                    1
+                    3
                 </h1>
             </div>
         );
     }
 }
 
-export default Placeholder1;
+export default Placeholder3;

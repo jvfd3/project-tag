@@ -1,20 +1,14 @@
 import React from 'react';
 import FooterComponentClass from '../components/footer';
 import HeaderComponentClass from '../components/header';
-// import HeaderComponent from '../components/header';
-// Style > className; Inner > Outter
+import HandmadeRouter from '../routes/router';
 
 class BasicBoxClass extends React.Component {
   render() {
     return (
-      <div className='BasicBox Capsule0' >
-        {/* <HeaderComponentClass /> */}
+      <div className='Capsule0 BasicBox' >
         <HeaderComponentClass />
-        <div className='MiddleCapsule Capsule1'>
-          <h1 className='blue WhiteText'>
-            G
-          </h1>
-        </div>
+        <HandmadeRouter />
         <FooterComponentClass />
       </div>
     );
