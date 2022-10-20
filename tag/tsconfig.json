@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/handmade/pages/add.tsx"  ]
 }

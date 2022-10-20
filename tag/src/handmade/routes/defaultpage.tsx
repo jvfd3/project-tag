@@ -1,7 +1,7 @@
 import React from 'react';
+import HandmadeRouter from './router';
 import FooterComponentClass from '../components/footer';
 import HeaderComponentClass from '../components/header';
-import HandmadeRouter from '../routes/router';
 
 class BasicBoxClass extends React.Component {
   render() {

@@ -7,9 +7,12 @@ import {
   Route,
 } from "react-router-dom";
 
-import Placeholder1 from '../pages/page_1';
-import Placeholder2 from '../pages/page_2';
-import Placeholder3 from '../pages/page_3';
+import MainPage from '../pages/main';
+import SelfPage from '../pages/self';
+import AddTagPage from '../pages/add';
+import SearchTagPage from '../pages/search';
+// import SignInPage from '../pages/signIn';
+// import SignUpPage from '../pages/signUp';
 
 
 class HandmadeRouter extends React.Component {
@@ -17,9 +20,10 @@ class HandmadeRouter extends React.Component {
     return (
       <Router>
         <Routes>
-          <Route path='/' element={<Placeholder1 />} />
-          <Route path='/2' element={<Placeholder2 />} />
-          <Route path='/3' element={<Placeholder3 />} />
+          <Route path='/' element={<MainPage />} />
+          <Route path='/self' element={<SelfPage />} />
+          <Route path='/add' element={<AddTagPage />} />
+          <Route path='/search' element={<SearchTagPage />} />
         </Routes>
       </Router>
     );

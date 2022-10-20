@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import BasicBoxClass from './handmade/pages/defaultpage';
+import BasicBoxClass from './handmade/routes/defaultpage';
 import './handmade/styles/jv_styles.css';
 
 
