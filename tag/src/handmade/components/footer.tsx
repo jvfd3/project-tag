@@ -1,5 +1,3 @@
-// Footer
-
 import React from 'react';
 
 class FooterComponentClass extends React.Component {
