@@ -50,6 +50,11 @@
   /* background-color: #392; */
 }
 
+.BlackText {
+  color: black;
+  /* background-color: #392; */
+}
+
 .BasicBox {
   background-color: black;
   height: 100%;
