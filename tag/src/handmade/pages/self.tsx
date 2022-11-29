@@ -19,10 +19,8 @@ class SelfPage extends React.Component {
         <h1 className='WhiteText'>
           SelfPage
         </h1>
-        <p className='Capsule2'>
-          <p className='WhiteText'>
-            {selfPageMessage}
-          </p>
+        <p className='Capsule2 WhiteText'>
+          {selfPageMessage}
         </p>
       </div>
     );

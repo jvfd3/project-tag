@@ -51,10 +51,11 @@ class UserSignForm extends React.Component<any, any> {
   }
 
   reSetStateIn() {
-    this.setState({ isLogged: !this.state.isLogged });
+    // this.setState({ isLogged: !this.state.isLogged });
+    this.setState({ isLogged: true });
   }
   render() {
-    const { username, password, rememberMe } = this.state;
+    const { username, password/* , rememberMe */ } = this.state;
     return (
       <div className='Capsule2'>
         <div className='Capsule3'>

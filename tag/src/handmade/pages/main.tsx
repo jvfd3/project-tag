@@ -19,11 +19,9 @@ class MainPage extends React.Component {
         <h1 className='WhiteText'>
           MainPage
         </h1>
-        <p className='Capsule2'>
+        <p className='Capsule2 WhiteText'>
           <img className='Capsule3 imageMainTagLogo' src='tag.png' alt='Tag logo' />
-          <p className='WhiteText'>
-            {mainPageMessage}
-          </p>
+          {mainPageMessage}
         </p>
       </div>
     );
