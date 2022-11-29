@@ -1,6 +1,18 @@
+/*
+    Este código está sendo desenvolvido como parte da disciplina
+    Paradigma Orientado a Objetos para Desenvolvimento de Software,
+    ministrada pelo Professor Doutor Ausberto Silverio Castro Vera,
+    no bacharelado de Ciência da Computação da
+    Universidade Estadual do Norte Fluminense Darcy Ribeiro.
+    O aluno responsável se chama João Vítor Fernandes Dias.
+    O nome do projeto é "TAG".
+      novembro de 2022.
+*/
+
 import React from 'react';
 import aux from '../Misc/functions'
 import { useNavigate } from "react-router-dom";
+
 // import fs from 'fs';
 // import { saveAccount } from '../Misc/functions'
 /* To Do:
@@ -82,7 +94,7 @@ class UserSignForm extends React.Component<any, any> {
     e.preventDefault();
 
     if (this.validateForm(this)) {
-      const { username, password, rememberMe, actual_values } = this.state;
+      const { username, password } = this.state;
       const model = {
         username: username.value,
         password: password.value,
@@ -92,11 +104,13 @@ class UserSignForm extends React.Component<any, any> {
       // console.log(typeof model)
       // HelpingFunctions.saveAccount(model);
       let account_already_exists = aux.checkExistance(model);
+      const navigate = useNavigate();
+      navigate('/about')
+
       let message = ''
       if (account_already_exists) {
         message = 'Logged in'
-        const navigate = useNavigate();
-        navigate('/about')
+        account_already_exists = false
       } else {
         aux.saveAccount(model);
         message = 'Saved account'
