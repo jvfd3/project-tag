@@ -7,7 +7,7 @@ class SignUpPage extends React.Component {
       <div className='Capsule1 MiddleCapsule'>
         <div className='Capsule2'> {/* Title */}
           <h1 className='WhiteText'>
-            SignInPage
+            SignUpPage
           </h1>
         </div>
         <UserSignForm />
