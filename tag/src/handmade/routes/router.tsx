@@ -20,7 +20,6 @@ import SelfPage from '../pages/self';
 import AboutPage from '../pages/about';
 import AddTagPage from '../pages/add';
 import SignInPage from '../pages/signIn';
-import SignUpPage from '../pages/signUp';
 import SearchTagPage from '../pages/search';
 import HeaderComponentClass from '../components/header';
 import FooterComponentClass from '../components/footer';
@@ -49,7 +48,6 @@ class HandmadeRouter extends React.Component {
         <Route path='/self' element={<SelfPage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/SignIn' element={<SignInPage />} />
-        <Route path='/SignUp' element={<SignUpPage />} />
         <Route path='/search' element={<SearchTagPage />} />
         {/* <Route path='/add' element={this.encapsulate(<AddTagPage />)} /> */}
       </Routes>

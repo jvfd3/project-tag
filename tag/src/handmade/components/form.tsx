@@ -11,7 +11,7 @@
 
 import React from 'react';
 import aux from '../Misc/functions'
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 // import fs from 'fs';
 // import { saveAccount } from '../Misc/functions'
@@ -36,7 +36,9 @@ import { useNavigate } from "react-router-dom";
 class UserSignForm extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
+    // console.log(props.isThisContext.state.isLogged)
     this.state = {
+      logged_outter_state: props.isThisContext.state.isLogged,
       username: { name: 'username', value: '', error: '', required: true },
       password: { name: 'password', value: '', error: '', required: true },
       rememberMe: { name: 'rememberMe', value: false, error: '', required: false },
@@ -45,6 +47,11 @@ class UserSignForm extends React.Component<any, any> {
         password: 'initial password',
       },
     };
+    this.reSetStateIn = this.reSetStateIn.bind(this);
+  }
+
+  reSetStateIn() {
+    this.setState({ isLogged: !this.state.isLogged });
   }
   render() {
     const { username, password, rememberMe } = this.state;
@@ -71,12 +78,12 @@ class UserSignForm extends React.Component<any, any> {
               onChange={this.onChange_1}
             />
             <br />
-            <input
+            {/* <input
               name={rememberMe.name}
               checked={rememberMe.value}
               onChange={this.onChange_1}
               type='checkbox'
-            />
+            /> */}
             <input type='submit' value='Submit' />
           </form>
         </div>
@@ -104,17 +111,24 @@ class UserSignForm extends React.Component<any, any> {
       // console.log(typeof model)
       // HelpingFunctions.saveAccount(model);
       let account_already_exists = aux.checkExistance(model);
-      const navigate = useNavigate();
-      navigate('/about')
+      // const navigate = useNavigate();
+      // navigate('/about')
 
       let message = ''
       if (account_already_exists) {
-        message = 'Logged in'
-        account_already_exists = false
+        message = 'Already Logged'
+        if (!this.state.logged_outter_state) {
+          message = 'Logged in'
+          this.setState({
+            // isThisContext.state.isLogged: true,
+            logged_outter_state: true,
+          })
+        }
       } else {
         aux.saveAccount(model);
         message = 'Saved account'
       }
+      console.log(this.state.logged_outter_state)
       alert(message);
     }
   }

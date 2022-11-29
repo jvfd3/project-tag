@@ -20,15 +20,12 @@ class About extends React.Component {
         <h1 className='WhiteText'>
           About
         </h1>
-        <p className='Capsule2'>
-
+        <p className='Capsule2 WhiteText'>
           <img className='Capsule3 AboutCCImage' src='Logo-cc 400x246.png' alt='CC logo' />
-          <p className='FooterText WhiteText'>
-            {aboutMessage1}
-          </p>
-          <p className='FooterText WhiteText'>
-            {aboutMessage2}
-          </p>
+          <br />
+          {aboutMessage1}
+          <br />
+          {aboutMessage2}
         </p>
       </div>
     );

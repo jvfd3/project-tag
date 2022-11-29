@@ -20,21 +20,21 @@ import React from 'react';
 import data from './../database/db_username_password.json'
 var db_username_password = data;
 
-const saveData_JSON = (data: Object, file: string) => {
-  // import fs from "fs";
-  // import * as fs from 'fs';
-  // import * as fs from 'node:fs/promises';
-  // import { saveAs } from 'file-saver';
-  // import * as fs from 'fs'
-  // import fs from 'fs';
-  // import { promises as fsPromises } from 'fs'
-  // console.log(fs.readFile)
-  // const fs = require('fs')
-  // console.log(fs)
-  // require("fs").writeFile("demo.txt", "Foo bar!");
-  // const jsonData = JSON.stringify(data, null, 2);
-  // fs.writeFileSync(file, jsonData);
-}
+/* const saveData_JSON = (data: Object, file: string) => {
+  import fs from "fs";
+  import * as fs from 'fs';
+  import * as fs from 'node:fs/promises';
+  import { saveAs } from 'file-saver';
+  import * as fs from 'fs'
+  import fs from 'fs';
+  import { promises as fsPromises } from 'fs'
+  console.log(fs.readFile)
+  const fs = require('fs')
+  console.log(fs)
+  require("fs").writeFile("demo.txt", "Foo bar!");
+  const jsonData = JSON.stringify(data, null, 2);
+  fs.writeFileSync(file, jsonData);
+} */
 
 
 function checkExistance(account_data: any) {
@@ -60,23 +60,12 @@ function saveAccount(account_data: any) {
   // const jsonData = JSON.stringify(data, null, 2);
 
   // let exists = Object.values(db_username_password).includes(account_data);
-  // console.log(exists)
 
   db_username_password.push(account_data)
+  console.log(db_username_password)
   return db_username_password
 }
 
-class HelpingFunctions extends React.Component<any, any> {
-  render() {
-    return (
-      <>
-      </>
-    );
-  }
-  saveAccount(account_data: any) {
-    console.log(account_data)
-  }
-}
 
 const functions_to_export = {
   saveAccount,

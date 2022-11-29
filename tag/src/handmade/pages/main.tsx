@@ -13,11 +13,18 @@ import React from 'react';
 
 class MainPage extends React.Component {
   render() {
+    const mainPageMessage = 'This page should explain the concept behind the project tag. How to use it and how to benefit from it.'
     return (
       <div className='Capsule1 MiddleCapsule'>
         <h1 className='WhiteText'>
           MainPage
         </h1>
+        <p className='Capsule2'>
+          <img className='Capsule3 imageMainTagLogo' src='tag.png' alt='Tag logo' />
+          <p className='WhiteText'>
+            {mainPageMessage}
+          </p>
+        </p>
       </div>
     );
   }

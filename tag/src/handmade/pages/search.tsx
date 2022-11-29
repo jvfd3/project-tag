@@ -13,14 +13,14 @@ import React from 'react';
 
 class SearchPage extends React.Component {
   render() {
-    const things_to_do = 'This page should have a top bar for searching objects. Under it all the found objects are shown.'
+    const searchPageMessage = 'This page should have a top bar for searching objects. Under it, all the found objects are shown.'
     return (
       <div className='Capsule1 MiddleCapsule'>
         <h1 className='WhiteText'>
           SearchPage
         </h1>
         <p className='Capsule2 WhiteText'>
-          {things_to_do}
+          {searchPageMessage}
         </p>
       </div>
     );
