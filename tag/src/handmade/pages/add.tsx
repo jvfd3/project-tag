@@ -10,15 +10,14 @@
 */
 
 import React from 'react';
+import PageTitle from '../components/title';
 
 class AddTagPage extends React.Component {
   render() {
     const addTagPageMessage = 'In this page there should be a preview of recently created tags and objects. But giving priority to user\'s created tags first. The user can create a new object providing the data needed'
     return (
       <div className='Capsule1 MiddleCapsule'>
-        <h1 className='WhiteText'>
-          AddTag
-        </h1>
+        <PageTitle title='AddTag' />
         <p className='Capsule2 WhiteText'>
           {addTagPageMessage}
         </p>

@@ -10,20 +10,18 @@
 */
 
 import React from 'react';
-import PageTitle from '../components/title';
 
-class SearchPage extends React.Component {
-  render() {
-    const searchPageMessage = 'This page should have a top bar for searching objects. Under it, all the found objects are shown.'
-    return (
-      <div className='Capsule1 MiddleCapsule'>
-        <PageTitle title='SearchPage' />
-        <p className='Capsule2 WhiteText'>
-          {searchPageMessage}
-        </p>
-      </div>
-    );
-  }
+class PageTitle extends React.Component<any, any> {
+    // constructor(props) {
+    //   super(props);
+    // }
+    render() {
+        return (
+            <h1 className='WhiteText'>
+                {this.props.title}
+            </h1>
+        );
+    }
 }
 
-export default SearchPage;
+export default PageTitle;

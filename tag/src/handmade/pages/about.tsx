@@ -10,6 +10,7 @@
 */
 
 import React from 'react';
+import PageTitle from '../components/title';
 
 class About extends React.Component {
   render() {
@@ -17,9 +18,7 @@ class About extends React.Component {
     let aboutMessage2 = 'O objetivo deste código é o de permitir que um usuário adicione tags a objetos que possam ser futuramente utilizadas como um critério de busca.'
     return (
       <div className='Capsule1 MiddleCapsule'>
-        <h1 className='WhiteText'>
-          About
-        </h1>
+        <PageTitle title='About' />
         <p className='Capsule2 WhiteText'>
           <img className='Capsule3 AboutCCImage' src='Logo-cc 400x246.png' alt='CC logo' />
           <br />

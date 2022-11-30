@@ -16,8 +16,10 @@
   --indentLevel3: #333;
   --indentLevel4: #444;
   --indentLevel5: #555;
-  --defaultMargin: 2px;
-  --defaultBorderWidth: 2px;
+  /* --defaultMargin: 2px;
+  --defaultBorderWidth: 2px; */
+  --defaultMargin: 0px;
+  --defaultBorderWidth: 0px;
 }
 
 .Capsule0 {

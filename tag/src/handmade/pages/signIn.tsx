@@ -11,6 +11,7 @@
 
 import React from 'react';
 import UserSignForm from '../components/form';
+import PageTitle from '../components/title';
 
 class SignInPage extends React.Component<any, any> {
   constructor(props: any) {
@@ -47,9 +48,7 @@ class SignInPage extends React.Component<any, any> {
     return (
       <div className='Capsule1 MiddleCapsule'>
         <div className='Capsule2'> {/* Title */}
-          <h1 className='WhiteText'>
-            SignInPage
-          </h1>
+          <PageTitle title='SignInPage' />
         </div>
         {this.login()}
       </div>
