@@ -13,10 +13,11 @@ import React from 'react';
 
 class FooterComponentClass extends React.Component {
   render() {
+    let footerMessage = 'Code developed by João Vítor Fernandes Dias for a class given by Ausberto Silverio Castro Vera.'
     return (
       <div className='FooterCapsule Capsule1'>
         <p className='FooterText WhiteText'>
-          Este é o rodapé de informações
+          {footerMessage}
         </p>
       </div>
     );
