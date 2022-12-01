@@ -17,7 +17,7 @@ class PageTitle extends React.Component<any, any> {
     // }
     render() {
         return (
-            <h1 className='WhiteText'>
+            <h1 className='Capsule2 WhiteText'>
                 {this.props.title}
             </h1>
         );

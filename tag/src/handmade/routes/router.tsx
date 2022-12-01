@@ -8,6 +8,7 @@
     O nome do projeto é "TAG".
       novembro de 2022.
 */
+/* ToDo: Passing things to addtag is wrong */
 
 import React from 'react';
 import {
@@ -28,9 +29,13 @@ class HandmadeRouter extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
-      RouterParentState: props.globalTagsFromDefaultPage,
+      // routerAddTagStates: props.globalTagsFromDefaultPage.addTagStates,
+      // objectName: 'd',
+      // objectValue: 'b',
+      parentState: props.globalTagsFromDefaultPage,
+      parentAddTagStates: props.globalTagsFromDefaultPage.addTagStates,
     }
-    // console.log('Router state:', this.state.RouterParentState)
+    // console.log('Router AddTagStates:', this.state.parentAddTagStates)
     // this.encapsulate = this.encapsulate.bind(this);
   }
   encapsulate(props: any) { // Not used
@@ -47,18 +52,19 @@ class HandmadeRouter extends React.Component<any, any> {
     return (
       <>
 
-        <form onSubmit={this.state.RouterParentState.handleSubmitState.bind(this)}>
-          <input type='text' value={this.state.objectName} onChange={(e) => { this.setState({ objectName: e.target.value }) }} />
+        {/* <form onSubmit={this.state.parentState.addTagStates.handleSubmitState.bind(this)}>
+          <input value={this.state.objectName} onChange={(e) => { this.setState({ objectName: e.target.value }) }} type='text' style={{ width: 20 }} />
+          <input value={this.state.objectValue} onChange={(e) => { this.setState({ objectValue: e.target.value }) }} type='text' style={{ width: 20 }} />
           <input type='submit' value='router' />
-        </form>
+        </form> */}
         <Routes>
           <Route path='/' element={<MainPage />} />
-          <Route path='/add' element={<AddTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
+          <Route path='/add' element={<AddTagPage globalTagsFromRouter={this.state} />} />
           <Route path='/self' element={<SelfPage />} />
           <Route path='/about' element={<AboutPage />} />
-          <Route path='/SignIn' element={<SignInPage globalTagsFromRouter={this.state.RouterParentState} />} />
-          <Route path='/search' element={<SearchTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
-          {/* <Route path='/add' element={this.encapsulate(<AddTagPage />)} /> */}
+          <Route path='/SignIn' element={<SignInPage globalTagsFromRouter={this.state.parentState} />} />
+          <Route path='/search' element={<SearchTagPage globalTagsFromRouter={this.state.parentState} />} />
+          <Route path='/add' element={this.encapsulate(<AddTagPage />)} />
         </Routes>
       </>
     );

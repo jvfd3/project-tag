@@ -172,6 +172,18 @@
 
 .self_column {}
 
+.add_row {}
+
+.add_column {}
+
+.search_row {}
+
+.search_column {}
+
+.SearchBar {}
+
+.SearchedTagsBox {}
+
 .addTagButtonsContainer {
   justify-content: space-between;
 }

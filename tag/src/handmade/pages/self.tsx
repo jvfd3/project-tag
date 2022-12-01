@@ -51,16 +51,20 @@ class SelfUserContent extends React.Component {
       for (let index = 0; index < size; index++) {
         let list_key = keys[index]
         let list_value = values[index]
+        // console.log(list_key, list_value)
         list_of_user_data.push(
-          <tr className='self_row'>
-            <th className='self_column'> <>{list_key}</> </th>
-            <th className='self_column'> <>{list_value}</> </th>
+          <tr className='self_row' key={index}>
+            <th className='self_column' key={list_key}> <>{list_key}</> </th>
+            <th className='self_column' key={1000 + index}> <>{list_value}</> </th>
           </tr>
         )
       }
       return (
         <table>
-          {list_of_user_data}
+          <thead>
+            {list_of_user_data}
+
+          </thead>
         </table>
       );
     }
@@ -71,6 +75,7 @@ class SelfUserContent extends React.Component {
     )
   }
 }
+
 class SelfPage extends React.Component {
   render() {
     return (
