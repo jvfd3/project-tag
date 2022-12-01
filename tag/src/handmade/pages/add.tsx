@@ -17,14 +17,16 @@ import PageTitle from '../components/title';
 class TagCreationHolder extends React.Component<any, any> {
   constructor(props: any) {
     let outerTagUpdaterFunction = props.tagUpdater.setTagsFuncState
-    console.log(props.tagUpdater)
+    // console.log(props.tagUpdater)
     super(props);
     this.state = {
       objectName: '',
       objectValue: '',
       tagUpdaterFunction: outerTagUpdaterFunction,
+      globalStuff: props.tagUpdater,
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // console.log(this.state.globalStuff)
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(event: any) {
     const { objectName, objectValue } = this.state
@@ -40,7 +42,7 @@ class TagCreationHolder extends React.Component<any, any> {
   render() {
     return (
       <div className='Capsule2'>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.state.globalStuff.handleSubmitState.bind(this)}>
           {/* <TagElement /> */}
           <div className='Capsule3 WhiteText row' style={{ flexDirection: 'row' }}>
             <>

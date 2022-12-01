@@ -31,7 +31,6 @@ class HandmadeRouter extends React.Component<any, any> {
       RouterParentState: props.globalTagsFromDefaultPage,
     }
     // console.log('Router state:', this.state.RouterParentState)
-
     // this.encapsulate = this.encapsulate.bind(this);
   }
   encapsulate(props: any) { // Not used
@@ -46,15 +45,22 @@ class HandmadeRouter extends React.Component<any, any> {
   }
   render() {
     return (
-      <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/add' element={<AddTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
-        <Route path='/self' element={<SelfPage />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/SignIn' element={<SignInPage globalTagsFromRouter={this.state.RouterParentState} />} />
-        <Route path='/search' element={<SearchTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
-        {/* <Route path='/add' element={this.encapsulate(<AddTagPage />)} /> */}
-      </Routes>
+      <>
+
+        <form onSubmit={this.state.RouterParentState.handleSubmitState.bind(this)}>
+          <input type='text' value={this.state.objectName} onChange={(e) => { this.setState({ objectName: e.target.value }) }} />
+          <input type='submit' value='router' />
+        </form>
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+          <Route path='/add' element={<AddTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
+          <Route path='/self' element={<SelfPage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/SignIn' element={<SignInPage globalTagsFromRouter={this.state.RouterParentState} />} />
+          <Route path='/search' element={<SearchTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
+          {/* <Route path='/add' element={this.encapsulate(<AddTagPage />)} /> */}
+        </Routes>
+      </>
     );
   }
 }

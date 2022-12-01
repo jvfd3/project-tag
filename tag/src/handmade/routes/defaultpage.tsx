@@ -22,17 +22,37 @@ class BasicBoxClass extends React.Component<any, any> {
       setTagsFuncState: this.setTagsFunc,
       accounts: [],
       setAccountsFuncState: this.setAccountsFunc,
+      objectName: 'a',
+      objectValue: 'b',
+      handleSubmitState: this.addTagHandleSubmit,
     }
-    // console.log('DefaultPage state:', this.state)
-
   }
   setTagsFunc(tagToAdd: object) {
-    let newTags = this.state.tags.push(tagToAdd);
+    alert('defaultPage: setTagsFunc: pre')
+    console.log('defPage: tagToAdd: ', tagToAdd)
+    console.log('defPage, state: ', this.state)
+    alert('defaultPage: setTagsFunc: post')
+  }
+  addTagHandleSubmit(event: any) {
+    alert('defaultPage>addTagHandleSubmit>pre')
+    event.preventDefault();
+    const { objectName, objectValue } = this.state
+    const tagObject = {
+      tagKey: objectName,
+      tagValue: objectValue,
+    }
+    console.log(tagObject)
+    console.log(this.state)
+    let newTags = this.state.tags
+    console.log('defPage: newTagsOld: ', newTags)
+    newTags.push(tagObject);
+    console.log('defPage: newTagsOld: ', newTags)
     this.setState({ tags: newTags })
-    console.log('defaultpage: new tag added')
-    console.log('defaultpage: local:', newTags, 'state:', this.state.tags)
+    alert('defaultPage>addTagHandleSubmit>post')
+
   }
   setAccountsFunc(accountToAdd: object) {
+    alert('defaultPage')
     let newAccounts = this.state.tags.push(accountToAdd);
     this.setState({ accounts: newAccounts })
     console.log('defaultpage: new account added')
@@ -43,6 +63,12 @@ class BasicBoxClass extends React.Component<any, any> {
       <>
         <div className='Capsule0 BasicBox' >
           <HeaderComponentClass />
+          <form onSubmit={this.state.handleSubmitState.bind(this)}>
+            <input value={this.state.objectName} onChange={(e) => { this.setState({ objectName: e.target.value }) }} type='text' style={{ width: 20 }} />
+            <input value={this.state.objectValue} onChange={(e) => { this.setState({ objectValue: e.target.value }) }} type='text' style={{ width: 20 }} />
+            <input type='submit' value='DefPage' />
+          </form>
+
           <HandmadeRouter globalTagsFromDefaultPage={this.state} />
           <FooterComponentClass />
         </div>
