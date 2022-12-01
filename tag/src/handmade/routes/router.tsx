@@ -24,9 +24,12 @@ import SearchTagPage from '../pages/search';
 import HeaderComponentClass from '../components/header';
 import FooterComponentClass from '../components/footer';
 
-class HandmadeRouter extends React.Component {
+class HandmadeRouter extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
+    this.state = {
+      addedTags: [],
+    }
     this.encapsulate = this.encapsulate.bind(this);
   }
   encapsulate(props: any) { // Not used
@@ -40,11 +43,17 @@ class HandmadeRouter extends React.Component {
       </div >
     );
   }
+  outerAddedTagsUpdater(tagToAdd: object) {
+    // alert('was it changed?');
+    console.log(tagToAdd)
+    this.state.addedTags.push(tagToAdd)
+    console.log(this.state.addedTags)
+  }
   render() {
     return (
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/add' element={<AddTagPage />} />
+        <Route path='/add' element={<AddTagPage updateTags={this.outerAddedTagsUpdater} />} />
         <Route path='/self' element={<SelfPage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/SignIn' element={<SignInPage />} />

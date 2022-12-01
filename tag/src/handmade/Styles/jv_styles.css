@@ -16,10 +16,10 @@
   --indentLevel3: #333;
   --indentLevel4: #444;
   --indentLevel5: #555;
-  /* --defaultMargin: 2px;
-  --defaultBorderWidth: 2px; */
-  --defaultMargin: 0px;
-  --defaultBorderWidth: 0px;
+  --defaultMargin: 2px;
+  --defaultBorderWidth: 2px;
+  /* --defaultMargin: 0px;
+  --defaultBorderWidth: 0px; */
 }
 
 .Capsule0 {
@@ -97,7 +97,7 @@
   margin-top: auto;
 }
 
-.MiddleCapsule {
+.fillHeight {
   height: 100%;
 }
 
@@ -144,6 +144,56 @@
   margin: 5px;
 }
 
+.outerSelfImageBorder {
+  aspect-ratio: 1;
+  width: 110px;
+  margin: 10px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center_internal_items {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.center {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.self_row {}
+
+.self_column {}
+
+.addTagButtonsContainer {
+  justify-content: space-between;
+}
+
+.addTagButton {
+  justify-content: space-between;
+  width: 60px;
+  margin: 5px;
+}
+
+.round {
+  border-radius: 100%;
+}
+
+.self_profile_pic {
+  width: 100px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
 
 /* import { StyleSheet } from 'react';
 

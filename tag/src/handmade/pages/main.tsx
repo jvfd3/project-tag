@@ -16,10 +16,10 @@ class MainPage extends React.Component {
   render() {
     const mainPageMessage = 'This page should explain the concept behind the project tag. How to use it and how to benefit from it.'
     return (
-      <div className='Capsule1 MiddleCapsule'>
+      <div className='Capsule1 fillHeight'>
         <PageTitle title='MainPage' />
         <p className='Capsule2 WhiteText'>
-          <img className='Capsule3 imageMainTagLogo' src='tag.png' alt='Tag logo' />
+          <img className='Capsule3 imageMainTagLogo' src='images/tag.png' alt='Tag logo' />
           <br />
           {mainPageMessage}
         </p>

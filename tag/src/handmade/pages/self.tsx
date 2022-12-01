@@ -8,44 +8,78 @@
     O nome do projeto é "TAG".
       novembro de 2022.
 */
+/* "This page should provide the user's information: Profile pic, username, name, email, creation date, created tags, created objects, etc. And also allow modification to these information."
+  ToDo: Add a pencil button to make it able to change information
+*/
 
 import React from 'react';
 import PageTitle from '../components/title';
 
-class ProfilePic extends React.Component {
+class SelfImage extends React.Component {
+  /* Falta centralizar isso daqui */
   render() {
     return (
-      <>
-        <div className='Outer'>
-          <div className='Image'>
-            <div className='first'>
-            </div>
-            <div className='second'>
-            </div>
-            <div className='third'>
-            </div>
-          </div>
-        </div>
-        {/* 
-         _____  _____   Imagem    Edição
-        |_____||_____|  username  Edição
-        |_____||_____|  Senha     Edição
-        |_____||_____|  tag Numb  Edição
-        */}
-      </>
+      <div className='Capsule3 outerSelfImageBorder round center_internal_items'>
+        <img className='Capsule4 self_profile_pic round center_internal_items' src='images/template_user_picture.png' alt='profile' />
+      </div>
     )
   }
 }
-
+class SelfUserContent extends React.Component {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      username: 'nome_de_usuario',
+      password: '***************',
+      email: 'email@gmail.com',
+      tags_created: 4,
+      creation_date: '01/02/2003'
+    }
+    /* 
+       _____  _____   Imagem    Edição
+      |_____||_____|  username  Edição
+      |_____||_____|  Senha     Edição
+      |_____||_____|  tag Numb  Edição
+    */
+  }
+  render() {
+    function get_items(elements: any) {
+      let list_of_user_data = []
+      let size = Object.keys(elements).length
+      let keys = Object.keys(elements)
+      let values = Object.values(elements)
+      for (let index = 0; index < size; index++) {
+        let list_key = keys[index]
+        let list_value = values[index]
+        list_of_user_data.push(
+          <tr className='self_row'>
+            <th className='self_column'> <>{list_key}</> </th>
+            <th className='self_column'> <>{list_value}</> </th>
+          </tr>
+        )
+      }
+      return (
+        <table>
+          {list_of_user_data}
+        </table>
+      );
+    }
+    return (
+      <div className='center WhiteText'>
+        {get_items(this.state)}
+      </div>
+    )
+  }
+}
 class SelfPage extends React.Component {
   render() {
-    const selfPageMessage = "This page should provide the user's information: Profile pic, username, name, email, creation date, created tags, created objects, etc. And also allow modification to these information."
     return (
-      <div className='Capsule1 MiddleCapsule'>
+      <div className='Capsule1 fillHeight'>
         <PageTitle title='SelfPage' />
-        <p className='Capsule2 WhiteText'>
-          {selfPageMessage}
-        </p>
+        <div className='Capsule2 center_internal_items' >
+          <SelfImage />
+          <SelfUserContent />
+        </div>
       </div>
     );
   }

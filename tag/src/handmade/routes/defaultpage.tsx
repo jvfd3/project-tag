@@ -14,7 +14,7 @@ import HandmadeRouter from './router';
 import HeaderComponentClass from '../components/header';
 import FooterComponentClass from '../components/footer';
 
-class BasicBoxClass extends React.Component {
+class BasicBoxClass extends React.Component<any, any> {
   render() {
     return (
       <>

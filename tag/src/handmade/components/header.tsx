@@ -22,7 +22,7 @@ class HeaderComponentClass extends React.Component {
   LogoTag() { // passar isso pra dentro da classe da forma certa
     return (
       <div className='Capsule2 HeaderLogo'>
-        <img className='Capsule3 HeaderLogoImage' src='tag.png' alt='Tag logo' />
+        <img className='Capsule3 HeaderLogoImage' src='images/tag.png' alt='Tag logo' />
         <p className='Capsule3 HeaderLogoText'>
           TAG
         </p>

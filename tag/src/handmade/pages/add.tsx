@@ -12,15 +12,69 @@
 import React from 'react';
 import PageTitle from '../components/title';
 
-class AddTagPage extends React.Component {
+
+
+class TagCreationHolder extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      objectName: '',
+      objectValue: '',
+      tagUpdaterFunction: props.tagUpdater,
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(event: any) {
+    const { objectName, objectValue } = this.state
+    const tagObject = {
+      tagKey: objectName,
+      tagValue: objectValue,
+      // rememberMe: rememberMe.value,
+    }
+    event.preventDefault();
+    alert('Submitted');
+    console.log(tagObject)
+    this.state.tagUpdaterFunction(tagObject);
+  }
   render() {
-    const addTagPageMessage = 'In this page there should be a preview of recently created tags and objects. But giving priority to user\'s created tags first. The user can create a new object providing the data needed'
     return (
-      <div className='Capsule1 MiddleCapsule'>
+      <div className='Capsule2'>
+        <form onSubmit={this.handleSubmit}>
+          {/* <TagElement /> */}
+          <div className='Capsule3 WhiteText row' style={{ flexDirection: 'row' }}>
+            <>
+              Type the tag's
+              <br />
+              name:
+              <input type='text' value={this.state.objectName} onChange={(e) => { this.setState({ objectName: e.target.value }) }} />
+              <br />
+              value:
+              <input type='text' value={this.state.objectValue} onChange={(e) => { this.setState({ objectValue: e.target.value }) }} />
+            </>
+          </div>
+          {/* <input type='button' value='Add tag' onClick={this.addNewElement} /> */}
+          {/* {' '} */}
+          <input type='submit' value='Submit' />
+          {' '}
+          <input type='reset' value='Reset Button' />
+        </form>
+
+      </div>
+    )
+  }
+}
+class AddTagPage extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      outerFunction: props.updateTags
+    }
+  }
+  render() {
+    return (
+      <div className='Capsule1 fillHeight'>
         <PageTitle title='AddTag' />
-        <p className='Capsule2 WhiteText'>
-          {addTagPageMessage}
-        </p>
+        <TagCreationHolder tagUpdater={this.state.outerFunction} />
       </div>
     );
   }

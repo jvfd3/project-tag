@@ -16,7 +16,7 @@ class SearchPage extends React.Component {
   render() {
     const searchPageMessage = 'This page should have a top bar for searching objects. Under it, all the found objects are shown.'
     return (
-      <div className='Capsule1 MiddleCapsule'>
+      <div className='Capsule1 fillHeight'>
         <PageTitle title='SearchPage' />
         <p className='Capsule2 WhiteText'>
           {searchPageMessage}
