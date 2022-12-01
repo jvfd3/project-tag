@@ -28,9 +28,11 @@ class HandmadeRouter extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
-      addedTags: [],
+      RouterParentState: props.globalTagsFromDefaultPage,
     }
-    this.encapsulate = this.encapsulate.bind(this);
+    // console.log('Router state:', this.state.RouterParentState)
+
+    // this.encapsulate = this.encapsulate.bind(this);
   }
   encapsulate(props: any) { // Not used
     let ElementToFill = props.element
@@ -38,26 +40,19 @@ class HandmadeRouter extends React.Component<any, any> {
       <div className='Capsule3 HeaderButton'>
         <HeaderComponentClass />
         {ElementToFill}
-        {/* <ElementToFill /> */}
         <FooterComponentClass />
       </div >
-    );
-  }
-  outerAddedTagsUpdater(tagToAdd: object) {
-    // alert('was it changed?');
-    console.log(tagToAdd)
-    this.state.addedTags.push(tagToAdd)
-    console.log(this.state.addedTags)
+    )
   }
   render() {
     return (
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/add' element={<AddTagPage updateTags={this.outerAddedTagsUpdater} />} />
+        <Route path='/add' element={<AddTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
         <Route path='/self' element={<SelfPage />} />
         <Route path='/about' element={<AboutPage />} />
-        <Route path='/SignIn' element={<SignInPage />} />
-        <Route path='/search' element={<SearchTagPage />} />
+        <Route path='/SignIn' element={<SignInPage globalTagsFromRouter={this.state.RouterParentState} />} />
+        <Route path='/search' element={<SearchTagPage globalTagsFromRouter={this.state.RouterParentState} />} />
         {/* <Route path='/add' element={this.encapsulate(<AddTagPage />)} /> */}
       </Routes>
     );

@@ -12,7 +12,7 @@
 import React from 'react';
 import PageTitle from '../components/title';
 
-class SearchPage extends React.Component {
+class SearchPage extends React.Component<any, any>{
   render() {
     const searchPageMessage = 'This page should have a top bar for searching objects. Under it, all the found objects are shown.'
     return (

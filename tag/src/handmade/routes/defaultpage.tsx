@@ -15,12 +15,35 @@ import HeaderComponentClass from '../components/header';
 import FooterComponentClass from '../components/footer';
 
 class BasicBoxClass extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      tags: [],
+      setTagsFuncState: this.setTagsFunc,
+      accounts: [],
+      setAccountsFuncState: this.setAccountsFunc,
+    }
+    // console.log('DefaultPage state:', this.state)
+
+  }
+  setTagsFunc(tagToAdd: object) {
+    let newTags = this.state.tags.push(tagToAdd);
+    this.setState({ tags: newTags })
+    console.log('defaultpage: new tag added')
+    console.log('defaultpage: local:', newTags, 'state:', this.state.tags)
+  }
+  setAccountsFunc(accountToAdd: object) {
+    let newAccounts = this.state.tags.push(accountToAdd);
+    this.setState({ accounts: newAccounts })
+    console.log('defaultpage: new account added')
+    console.log('defaultpage: new accounts:', newAccounts, 'state:', this.state.accounts)
+  }
   render() {
     return (
       <>
         <div className='Capsule0 BasicBox' >
           <HeaderComponentClass />
-          <HandmadeRouter />
+          <HandmadeRouter globalTagsFromDefaultPage={this.state} />
           <FooterComponentClass />
         </div>
       </>

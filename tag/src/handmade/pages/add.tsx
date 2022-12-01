@@ -12,15 +12,17 @@
 import React from 'react';
 import PageTitle from '../components/title';
 
-
+/* ToDo: Solve Tag addition later */
 
 class TagCreationHolder extends React.Component<any, any> {
   constructor(props: any) {
+    let outerTagUpdaterFunction = props.tagUpdater.setTagsFuncState
+    console.log(props.tagUpdater)
     super(props);
     this.state = {
       objectName: '',
       objectValue: '',
-      tagUpdaterFunction: props.tagUpdater,
+      tagUpdaterFunction: outerTagUpdaterFunction,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,11 +31,10 @@ class TagCreationHolder extends React.Component<any, any> {
     const tagObject = {
       tagKey: objectName,
       tagValue: objectValue,
-      // rememberMe: rememberMe.value,
     }
     event.preventDefault();
     alert('Submitted');
-    console.log(tagObject)
+    // console.log(tagObject)
     this.state.tagUpdaterFunction(tagObject);
   }
   render() {
@@ -67,14 +68,14 @@ class AddTagPage extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
-      outerFunction: props.updateTags
+      addTagParentState: props.globalTagsFromRouter,
     }
   }
   render() {
     return (
       <div className='Capsule1 fillHeight'>
         <PageTitle title='AddTag' />
-        <TagCreationHolder tagUpdater={this.state.outerFunction} />
+        <TagCreationHolder tagUpdater={this.state.addTagParentState} />
       </div>
     );
   }
