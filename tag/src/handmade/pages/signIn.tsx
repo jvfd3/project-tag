@@ -46,10 +46,8 @@ class SignInPage extends React.Component<any, any> {
   }
   render() {
     return (
-      <div className='Capsule1 fillHeight'>
-        <div className='Capsule2'> {/* Title */}
-          <PageTitle title='SignInPage' />
-        </div>
+      <div className='Capsule1 fillHeight LoginContainer'>
+        <PageTitle title='SignInPage' />
         {this.login()}
       </div>
     );

@@ -14,7 +14,7 @@ import React from 'react';
 import PageTitle from '../components/title';
 
 
-class FromScratch extends React.Component<any, any> {
+class TagTable extends React.Component<any, any> {
   constructor(props: any) {
     super(props)
     this.state = {
@@ -39,7 +39,7 @@ class FromScratch extends React.Component<any, any> {
     for (let index = 0; index < Object.keys(tags).length; index++) {
       // const element = Object.keys(tags)[index];
       let element_to_push = this.getLine(tags, index)
-      console.log(element_to_push)
+      // console.log(element_to_push)
       elements.push(element_to_push)
     }
     return (
@@ -68,36 +68,44 @@ class SearchPage extends React.Component<any, any>{
       template_DB: [
         {
           tagKey: 'Parafusos',
-          tagVal: '24',
+          tagVal: '12',
         },
         {
           tagKey: 'Pregos',
-          tagVal: '214',
+          tagVal: '34',
         },
         {
           tagKey: 'Porcas',
-          tagVal: '13',
+          tagVal: '56',
         },
         {
-          tagKey: 'Braçadeiras',
-          tagVal: '45',
+          tagKey: 'Picareta',
+          tagVal: '78',
+        },
+        {
+          tagKey: 'Pá',
+          tagVal: '91',
+        },
+        {
+          tagKey: 'Pincel',
+          tagVal: '23',
         },
       ]
     }
   }
   render() {
     return (
-      <div className='Capsule1 fillHeight'>
+      <div className='Capsule1 fillHeight SearchContainer'>
         <PageTitle title='SearchPage' />
         <div className='Capsule2'>
           <div className='Capsule3 SearchBar'>
-            <form /* onSubmit={} */>
-              <input type="search" defaultValue='Materiais de construção' />
-              <input type="submit" value='🔎' />
+            <form className='Capsule3 SearchBar'/* onSubmit={} */>
+              <input type='search' defaultValue='P' className='SearchText' />
+              <input type='submit' value='🔎' className='SearchText' />
             </form>
           </div>
           <div className='Capsule3 SearchedTagsBox'>
-            <FromScratch tags={this.state.template_DB} />
+            <TagTable tags={this.state.template_DB} />
           </div>
         </div>
       </div>

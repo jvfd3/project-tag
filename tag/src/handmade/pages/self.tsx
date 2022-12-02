@@ -29,11 +29,11 @@ class SelfUserContent extends React.Component {
   constructor(props: any) {
     super(props);
     this.state = {
-      username: 'nome_de_usuario',
-      password: '***************',
-      email: 'email@gmail.com',
-      tags_created: 4,
-      creation_date: '01/02/2003'
+      username: 'Joao Vitor',
+      password: '**********',
+      email: 'joaovitorfd2000@gmail.com',
+      tagsCreated: 7,
+      creationDate: '01/12/2022'
     }
     /* 
        _____  _____   Imagem    Edição
@@ -53,9 +53,9 @@ class SelfUserContent extends React.Component {
         let list_value = values[index]
         // console.log(list_key, list_value)
         list_of_user_data.push(
-          <tr className='self_row' key={index}>
-            <th className='self_column' key={list_key}> <>{list_key}</> </th>
-            <th className='self_column' key={1000 + index}> <>{list_value}</> </th>
+          <tr className='self_row' key={index + 10}>
+            <th className='self_column' key={index + 100}> <>{list_key}</> </th>
+            <th className='self_column' key={index + 1000}> <>{list_value}</> </th>
           </tr>
         )
       }
@@ -79,9 +79,9 @@ class SelfUserContent extends React.Component {
 class SelfPage extends React.Component {
   render() {
     return (
-      <div className='Capsule1 fillHeight'>
+      <div className='Capsule1 fillHeight SelfPageContainer'>
         <PageTitle title='SelfPage' />
-        <div className='Capsule2 center_internal_items' >
+        <div className='Capsule2 SelfPageContents' >
           <SelfImage />
           <SelfUserContent />
         </div>

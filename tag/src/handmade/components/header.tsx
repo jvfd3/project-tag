@@ -52,7 +52,7 @@ class HeaderComponentClass extends React.Component {
       <div className='Capsule1 HeaderCapsule'>
         <this.LogoTag />
         <div className='Capsule2 HeaderButtonsCapsule'>
-          <this.PageButton name='Main' />
+          {/* <this.PageButton name='Main' /> */}
           <this.PageButton name='Search' />
           <this.PageButton name='Add' />
           <this.PageButton name='Self' />

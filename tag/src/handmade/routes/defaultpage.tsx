@@ -14,7 +14,7 @@ import HandmadeRouter from './router';
 import HeaderComponentClass from '../components/header';
 import FooterComponentClass from '../components/footer';
 
-class BasicBoxClass extends React.Component<any, any> {
+class TagWholePage extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -98,4 +98,4 @@ class BasicBoxClass extends React.Component<any, any> {
   }
 }
 
-export default BasicBoxClass;
+export default TagWholePage;

@@ -58,13 +58,14 @@ class HandmadeRouter extends React.Component<any, any> {
           <input type='submit' value='router' />
         </form> */}
         <Routes>
-          <Route path='/' element={<MainPage />} />
+          <Route path='/' element={<SignInPage globalTagsFromRouter={this.state.parentState} />} />
           <Route path='/add' element={<AddTagPage globalTagsFromRouter={this.state} />} />
           <Route path='/self' element={<SelfPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/SignIn' element={<SignInPage globalTagsFromRouter={this.state.parentState} />} />
           <Route path='/search' element={<SearchTagPage globalTagsFromRouter={this.state.parentState} />} />
-          <Route path='/add' element={this.encapsulate(<AddTagPage />)} />
+          {/* <Route path='/add' element={this.encapsulate(<AddTagPage />)} /> */}
+          {/* This last one is useless, right? 🤨 */}
         </Routes>
       </>
     );

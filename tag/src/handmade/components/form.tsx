@@ -11,6 +11,8 @@
 
 import React from 'react';
 import aux from '../Misc/functions'
+import TextField from '@mui/material/TextField';
+
 // import { useNavigate } from "react-router-dom";
 
 // import fs from 'fs';
@@ -39,6 +41,30 @@ class UserSignForm extends React.Component<any, any> {
     // console.log(props.isThisContext.state.isLogged)
     this.state = {
       logged_outter_state: props.isThisContext.state.isLogged,
+      newUser: '',
+      newPswd: '',
+      usersList: [
+        {
+          username: 'ausberto',
+          password: 'ausberto',
+        },
+        {
+          username: 'joao',
+          password: 'joao',
+        },
+        {
+          username: 'tang',
+          password: 'tang',
+        },
+        {
+          username: 'rivera',
+          password: 'rivera',
+        },
+        {
+          username: 'annabell',
+          password: 'annabell',
+        },
+      ],
       username: { name: 'username', value: '', error: '', required: true },
       password: { name: 'password', value: '', error: '', required: true },
       rememberMe: { name: 'rememberMe', value: false, error: '', required: false },
@@ -57,37 +83,55 @@ class UserSignForm extends React.Component<any, any> {
   render() {
     const { username, password/* , rememberMe */ } = this.state;
     return (
-      <div className='Capsule2'>
-        <div className='Capsule3'>
-          <div className='WhiteText'>
-            {/* {this.state.name} */}
-          </div>
-          <form onSubmit={this.onSubmit}>
-            <input
-              type='text'
-              placeholder='username'
-              name={username.name}
-              value={username.value}
-              onChange={this.onChange_1}
-            />
-            <br />
-            <input
-              type='password'
-              placeholder='password'
-              name={password.name}
-              value={password.value}
-              onChange={this.onChange_1}
-            />
-            <br />
-            {/* <input
+      <div className='Capsule2 SignFormContainer'>
+        <form className='SignForm' onSubmit={this.onSubmit}>
+
+          <TextField
+            label="username"
+            className='SignInput'
+            id="outlined-size-small_USER"
+            autoComplete="username"
+            size="small"
+            value={this.state.newUser}
+            onChange={(e) => { this.setState({ newUser: e.target.value }) }}
+          />
+          <br />
+          <TextField
+
+            label="password"
+            className='SignInput'
+            id="outlined-size-small_PSWD"
+            size="small"
+
+            type="password"
+            autoComplete="current-password"
+            value={this.state.newPswd}
+            onChange={(e) => { this.setState({ newPswd: e.target.value }) }}
+          />
+          {/* <input
+            type='text'
+            placeholder='username'
+            name={username.name}
+            value={username.value}
+            onChange={this.onChange_1}
+          />
+          <br />
+          <input
+            type='password'
+            placeholder='password'
+            name={password.name}
+            value={password.value}
+            onChange={this.onChange_1}
+          /> */}
+          <br />
+          {/* <input
               name={rememberMe.name}
               checked={rememberMe.value}
               onChange={this.onChange_1}
               type='checkbox'
             /> */}
-            <input type='submit' value='Submit' />
-          </form>
-        </div>
+          <input type='submit' value='Submit' />
+        </form>
       </div>
     );
   }
@@ -101,37 +145,67 @@ class UserSignForm extends React.Component<any, any> {
   onSubmit = (e: any) => {
     e.preventDefault();
 
+    let model = {
+      username: this.state.newUser,
+      password: this.state.newPswd,
+    }
+    let account_already_exists = aux.checkExistance(model);
+
+    let message = ''
+    if (account_already_exists) {
+      message = 'Already Logged'
+      if (!this.state.logged_outter_state) {
+        message = 'You logged in at the account "' + model.username + '".'
+        this.setState({
+          // isThisContext.state.isLogged: true,
+          logged_outter_state: true,
+        })
+      }
+    } else {
+
+      let localUsers = this.state.usersList
+      localUsers.push(model)
+      this.setState({ usersList: localUsers })
+      aux.saveAccount(model);
+      message = 'user "' + model.username + '" was added.'
+    }
+    // console.log(this.state.logged_outter_state)
+    alert(message);
+
+
+    /*  
     if (this.validateForm(this)) {
-      const { username, password } = this.state;
+      const { newUser, newPswd } = this.state;
       const model = {
-        username: username.value,
-        password: password.value,
+        username: newUser,
+        password: newPswd,
         // rememberMe: rememberMe.value,
       }
-
-      // console.log(typeof model)
-      // HelpingFunctions.saveAccount(model);
-      let account_already_exists = aux.checkExistance(model);
-      // const navigate = useNavigate();
-      // navigate('/about')
-
-      let message = ''
-      if (account_already_exists) {
-        message = 'Already Logged'
-        if (!this.state.logged_outter_state) {
-          message = 'Logged in'
-          this.setState({
-            // isThisContext.state.isLogged: true,
-            logged_outter_state: true,
-          })
+      
+          // console.log(typeof model)
+          // HelpingFunctions.saveAccount(model);
+          let account_already_exists = aux.checkExistance(model);
+          // const navigate = useNavigate();
+          // navigate('/about')
+    
+          let message = ''
+          if (account_already_exists) {
+            message = 'Already Logged'
+            if (!this.state.logged_outter_state) {
+              message = 'Logged in'
+              this.setState({
+                // isThisContext.state.isLogged: true,
+                logged_outter_state: true,
+              })
+            }
+          } else {
+            aux.saveAccount(model);
+            message = 'Saved account'
+          }
+          console.log(this.state.logged_outter_state)
+          alert(message);
         }
-      } else {
-        aux.saveAccount(model);
-        message = 'Saved account'
-      }
-      console.log(this.state.logged_outter_state)
-      alert(message);
-    }
+        */
   }
 
   onChange_2(context: any, name: string, newValue: any, callback?: any) {
