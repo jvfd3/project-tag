@@ -18,7 +18,7 @@ The goal is to help the world to organize it's data and be able to search for th
 
 </summary>
 
-Here will be listed things that I still want to tho with this repository.
+Here will be listed things that I still want to do with this repository.
 
 <details> <summary>
 
