@@ -1,0 +1,49 @@
+\chapterimage{Pictures/Ausberto/05_Sistemas.png}
+% https://jvfd3.notion.site/Pesquisa-sobre-Organiza-o-de-conhecimento-09948a9ebf3f4934b0b9a71931d0aff3
+\chapter{Introdução}
+
+Este documento tem como objetivo cumprir o papel de documentação para o desenvolvimento de um software de \textit{folksonomia} orientado a objetos que visará criar relações professor-matéria para que estas informações possam ser utilizadas posteriormente por um algoritmo heurístico para organização de grade horária universitária. Estas relações serão definidas usando o conceito da \textit{folksonomia} que descreve o uso de etiquetas (tag, em inglês) para permitir que os usuários, que possuem o conhecimento sobre as relações existentes entre professores e disciplinas, possam alimentar com estas etiquetas os dados necessários para a futura execução do algoritmo.
+
+Neste documento também serão apresentados os diversos diagramas como diagramas de "casos de uso", "estados", "entidade e relacionamento", etc. que ilustram o comportamento esperado do sistema, bem como suas funcionalidades e fluxos de ações.
+
+O sistema a ser desenvolvido será um website para adição e pesquisa de tags. Entende-se por "tag" (etiqueta em inglês), características e propriedades dadas a um determinado objeto.
+
+O projeto como um todo tem como finalidade uma estrutura baseada em relações para organização de informação. Entretanto, considerando o tempo de desenvolvimento necessário para um sistema desse porte, o presente documento então visa servir apenas como uma prova de conceito, ou seja, espera-se exemplificar a execução do modelo teórico da inclusão de relações entre entidades, através de uma implementação resumida.
+
+\section{Contextualização}
+
+    Ao longo dos anos, desde filosofia com Sócrates a engenharia com Leonardo da Vinci, diversas vertentes de conhecimento têm sido produzidas. Para que as informações geradas continuem se mantendo relevante e permaneçam vivas ao longo das gerações é necessário que elas sejam armazenadas de alguma forma.
+
+    Nos tempos antigos, uma forma de tentar armazenar e manter a produção deste tipo de conteúdo foi a Biblioteca de Alexandria, que \href{https://brapci.inf.br/index.php/res/v/33713}{segundo Hagar Espanha (2017)}, possuía um catálogo (Pinakes) feito por Calímaco no século III a. C. Neste seu catálogo estava organizadas por temes e gêneros diversas obras da Biblioteca. 
+
+    Já nos tempos recentes, com o advento da internet e o aumento da geração de dados que fizeram surgir conceitos como Big Data, surge mais uma vez o questionamento: de que forma organizar toda essa quantidade de dados?
+
+    \subsection{Aprofundamento do problema}
+
+        O problema que viso combater com o desenvolvimento do sistema é a dificuldade para se organizar dados de forma coesa e intuitiva para que possam ser utilizados futuramente. Mais especificamente para conseguir lidar com a organização da grade de horários, é necessária a inserção de dados referentes as disponibilidades de professores. Esses dados precisam então de uma interface de fácil acesso para que coordenadores possam adicionar e modificar essas informações. % REVISAR 
+
+    \subsection{Soluções}
+
+        Como soluções para isso, temos alguns conceitos presentes na Biblioteconomia e na área da Ciência da Informação, como Tesauro e Ontologia. Entretanto, o que mais parece se adequar a questão abordada é o Vocabulário Controlado.
+
+        Este conceito visa utilizar de uma quantidade finita de conceitos e termos para permitir que as informações inseridas não fujam deste padrão, assim facilitando a gerência computacional desses dados.
+
+\section{Objetivo do Sistema} % Um objetivo Geral e 3 objetivos específicos
+
+    O sistema tem como objetivo apresentar a base estrutural de um site para adição de informações relacionadas aos professores que poderá posteriormente ser aprimorada para lidar com bases de dados mais amplas, idealmente permitindo que esta plataforma se torne útil para diversas instituições de ensino brasileiras.
+
+\section{Justificativa} % Justificar por que foi escolhido ou deve ser desenvolvido este sistema
+
+    Visto a ausência de alternativas que solucionem este problema de organização dessas informações, o desenvolvimento de tal sistema mostra-se deveras útil para sanar esta lacuna na gestão de carga horária dos professores e a criação de uma grade horária baseada nisso.
+
+\section{Trabalhos Relacionados}
+
+    Diversos trabalhos têm sido desenvolvidos na área da Organização do conhecimento. Temos o desenvolvimento de um \href{https://www.redalyc.org/journal/147/14768130022/html/}{tesauro específico para a Ciência da Computação}, desenvolvido pelo estudante João Pedro Kelniar. É também visto como um trabalho interdisciplinar entre filosofia, ciência da computação e ciência da informação, como abordado pelo Maurício Barcellos em \href{https://www.scielo.br/j/pci/a/T3BjQ9y9RvMMTJFY8mWBNBH/?lang=pt&format=pdf}{sua pesquisa}.
+
+\begin{comment}
+    Prof. Dra. Annabell del Real Tamariz
+    UENF - CCT - LCMAT - Curso de Ciência da Computação
+    Campos, RJ, 2023
+    AARE / Disciplina: Paradigma Orientado a Objetos para o Desenvolvimento de Software (POODS) 
+    Aluno: João Vítor Fernandes Dias
+\end{comment}

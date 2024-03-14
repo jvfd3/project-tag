@@ -1,0 +1,198 @@
+\chapterimage{Pictures/Ausberto/1_sistemas.png} % Table of contents heading image
+
+\chapter{Introdução}
+
+    \begin{comment}
+        Prof. Dr. Ausberto S. Castro Vera
+        UENF - CCT - LCMAT - Curso de Ciência da Computação
+        Campos, RJ,  2022
+        Disciplina: Análise e Projeto de Sistemas
+        Aluno: João Vítor Fernandes Dias
+    \end{comment}
+
+    %\textit{Análise e Projeto de Sistemas} é uma disciplina orientada a descrever as duas primeiras etapas do Ciclo de Vida de Desenvolvimento de um Sistema (CVDS), neste caso, um sistema computacional.  As referências bibliográficas básicas a serem consultadas são: \cite{Dennis2014}, \cite{Dennis2019} \cite{Gane1983} e \cite{Sommerville2011}. Como bibliografia complementar serão considerados: \cite{Satzinger2012}, \cite{Shelly2012}, \cite{Valacich2020}, \cite{Kendall2020}, \cite{Budgen2021} e \cite{Engholm2013}.
+
+    Neste documento é apresentado, passo a passo,  as atividades relacionadas com a Análise e Design de um sistema acadêmico.
+
+    \section{Descrição do Sistema Computacional a desenvolver}
+        Inicialmente é preciso descrever qual o conceito geral no qual se baseia o projeto e isto será feito logo abaixo.
+        
+        \subsection{Pontos a aprimorar}
+            Primeiramente, foi observada a vasta defasagem do sistema acadêmico atual em relação à tecnologia disponível no mercado. Para isso, uma das alternativas seria a reformulação do sistema, entretanto, as tecnologias utilizadas anteriormente poderiam servir como âncora para o desenvolvimento de um sistema acadêmico mais agradável ao usuário e que apresente eficácia, por isso foi vista a necessidade do desenvolvimento deste projeto que visa construir do zero um sistema acadêmico novo e melhor.
+            
+        \subsection{Pontos a inovar}
+            Os pontos de inovação são características que não estavam presentes no sistema anterior, porém apresentariam significativa melhora no sistema como um todo. Um dos principais pontos visados é o cálculo de demanda de matérias pelos alunos. Outro dos pontos é a organização matemática da melhor disposição de professores, matérias e alunos no quadro de horários.
+
+    \section{Identificando as componentes do meu sistema}
+        Alguns componentes foram analisados como necessários pelo sistema:
+        \subsection{Hardware}
+            \begin{itemize}
+                \item Ar condicionado
+                \item Mesa
+                \item Modem
+                \item Mouse pad
+                \item Pendrive
+                \item Repetidor wi-fi
+                \item Roteador
+                \item Servidor
+                \item Kit de informática completo
+                \begin{itemize}
+                    \item Computador
+                    \item Monitor
+                    \item Mouse
+                    \item Teclado
+                    \item Cabos
+                    \begin{itemize}
+                        \item hdmi-hdmi
+                        \item de força ATX (2x)
+                    \end{itemize}
+                \end{itemize}
+         	\end{itemize}
+    
+        \subsection{Software}
+            \begin{itemize}
+                \item Ambientes de desenvolvimento
+                \item Antivírus
+                \item Ferramentas de monitoramento do sistema
+                \item Pacote office gratuito
+                \item Sistema de banco de dados
+                \item Sistema operacional gratuito para:
+                \item Site do sistema acadêmico
+                \begin{itemize}
+                    \item Computadores
+                    \item Servidor
+                \end{itemize}
+            \end{itemize}
+    
+        \subsection{Pessoas}
+            \begin{itemize}
+                \item Analista de banco de dados
+                \item Coordenadoras de Centros Acadêmicos
+                \item Coordenadoras de Curso
+                \item Desenvolvedoras
+                \item Gerente do projeto
+                \item Secretária
+            \end{itemize}
+    
+        \subsection{Banco de Dados}
+            \begin{itemize}
+                \item Base de dados:
+                \begin{itemize}
+                    \item Alunos
+                    \begin{itemize}
+                        \item Data de entrada
+                        \item Email de login
+                        \item Email institucional
+                        \item Extrato com as notas das matérias
+                        \item Matrícula
+                        \item Nome
+                        \item Nota do ENEM
+                        \item Planos de estudo semestrais
+                    \end{itemize}
+                    \item Funcionários
+                    \begin{itemize}
+                        \item Professores
+                        \begin{itemize}
+                            \item Carga horária semanal
+                            \item Código
+                            \item Data de entrada
+                            \item E-mail de login
+                            \item E-mail institucional
+                            \item Extrato com as notas das matérias ministradas
+                            \item Link para o currículo Lattes
+                            \item Nome
+                            \item Nota de publicações acadêmicas
+                            \item Planos de estudo semestrais
+                            \item Salário
+                            \item Vagas disponíveis para Iniciação Científica
+                        \end{itemize}
+                        \item Outros
+                        \begin{itemize}
+                            \item Código
+                            \item Data de entrada
+                            \item E-mail de login
+                            \item E-mail institucional
+                            \item Nome
+                            \item Salário
+                        \end{itemize}
+                    \end{itemize}
+                \end{itemize}
+            \end{itemize}
+    
+        \subsection{Documentos}
+            \begin{itemize}
+                \item Formulários de:
+                \begin{itemize}
+                    \item Cancelamento de matrícula
+                    \item Exclusão de matéria
+                    \item Inclusão de matéria
+                    \item Matrícula
+                    \item Quebra de pré-requisito
+                    \item Trancamento de matrícula
+                    \item Transferência de curso
+                \end{itemize}
+            \end{itemize}
+    
+        \subsection{Metodologias ou Procedimentos}
+            \begin{itemize}
+                \item Levantamento de requisitos
+                \begin{itemize}
+                    \item Análise do sistema acadêmico atual
+                    \item Listagem do que está sendo necessário
+                    \item Listagem do que já se tem
+                    \item Listagem do que não foi necessário
+                \end{itemize}
+                \item Formação de equipe
+                \begin{itemize}
+                    \item Apresentação da estrutura do sistema acadêmico
+                    \item Tempo de adequação de um mês
+                    \item Testes para averiguar o quanto aprenderam
+                \end{itemize}
+                \item Análise do sistema
+                \begin{itemize}
+                    \item Averiguar qual a demanda de processamento dos softwares
+                    \item Desenvolvimento dos esquemas representativos do sistema
+                \end{itemize}
+                \item Implementação do sistema
+                \begin{itemize}
+                    \item Desenvolvimento do site
+                    \begin{itemize}
+                        \item Banco de dados
+                        \item Back-end
+                        \item Front-end
+                    \end{itemize}
+                    \item Montagem do servidor
+                    \item Montagem da rede wi-fi
+                    \item Montagem das salas com equipamentos de informática
+                \end{itemize}
+                \item Testes do sistema
+                \begin{itemize}
+                    \item Testes com professores
+                    \item Testes com funcionários
+                    \item Teste aberto
+                    \item Teste de estresse
+                    \item Teste de penetração
+                \end{itemize}
+                \item Capacitação para uso do sistema
+                \begin{itemize}
+                    \item Cursos de informática básica para todos os funcionários que interagirão com o sistema
+                \end{itemize}
+                \item Manutenção do sistema
+                \begin{itemize}
+                    \item Limpeza semanal na sala dos servidores
+                    \item Limpeza diária nas salas com equipamentos de informática
+                    \item Averiguações rotineiras quanto ao desempenho e bom funcionamento do sistema
+                \end{itemize}
+            \end{itemize}
+    
+        \subsection{Mobilidade}
+            \begin{itemize}
+                \item Telefones fixos conectados em rede interna
+                \item Roteadores e repetidores com área de abrangência em todo o Campus
+            \end{itemize}
+    
+        \subsection{Nuvem}
+            \begin{itemize}
+                \item Backup dos dados do servidor local
+                \item Utilização de ferramentas para trabalho compartilhado como Google Docs e similares
+            \end{itemize}

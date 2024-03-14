@@ -1,0 +1,35 @@
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+%\title{Projetos de Pesquisa Cient\'{\i}fica}
+%\author{Dr. Ausberto S. Castro Vera}
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=9cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0)
+        {\includegraphics[width=\paperwidth]{Pictures/Ausberto/00_capa.png}}; %Capa Imagem A4 21x29.7
+\draw[anchor=north] (midpoint) node [fill=azulao!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]
+          {\paperwidth}
+          {\centering TAG\\
+          ToDo:\\
+          - Modificar introdução por causa da mudança do foco da atividade\\
+          - Revisar referências requisitos não funcionais\\
+          3. Modelagem de Dados e Processos:\\
+          - Diagramas de Dados E-R\\
+          - Diagramas de Processos DFD (Contexto + outros) \\
+          [10pt] % Titulo Livro
+          {\huge\it João Vítor Fernandes Dias}\\[10pt]
+          {\huge\it Ausberto S. Castro Vera}\\[10pt]
+          {\large UENF - CCT - LCMAT - CC}\\[10pt]
+          {\large \today}
+          }
+        }; % Autor nome
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup

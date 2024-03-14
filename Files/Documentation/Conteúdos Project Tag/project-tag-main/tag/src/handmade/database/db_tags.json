@@ -1,0 +1,65 @@
+[
+  {
+    "object_name": "sheep",
+    "tags": {
+      "legs": "4",
+      "color": "white",
+      "hasWings": false,
+      "breathesInWater": false
+    }
+  },
+  {
+    "object_name": "elephant",
+    "tags": {
+      "legs": "4",
+      "color": "grey",
+      "hasWings": false,
+      "breathesInWater": false
+    }
+  },
+  {
+    "object_name": "fish",
+    "tags": {
+      "legs": "0",
+      "color": "orange",
+      "hasWings": false,
+      "breathesInWater": true
+    }
+  },
+  {
+    "object_name": "turtle",
+    "tags": {
+      "legs": "4",
+      "color": "green",
+      "hasWings": false,
+      "breathesInWater": false
+    }
+  },
+  {
+    "object_name": "octapus",
+    "tags": {
+      "legs": "8",
+      "color": "pink",
+      "hasWings": false,
+      "breathesInWater": true
+    }
+  },
+  {
+    "object_name": "bird",
+    "tags": {
+      "legs": "2",
+      "color": "grey",
+      "hasWings": true,
+      "breathesInWater": false
+    }
+  },
+  {
+    "object_name": "penguin",
+    "tags": {
+      "legs": "2",
+      "color": "black",
+      "hasWings": true,
+      "breathesInWater": false
+    }
+  },
+]

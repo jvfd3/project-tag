@@ -1,0 +1,123 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ciência da Computação
+% Campos, RJ,  2022 
+% Disciplina: Paradigma de Desenvolvimento Orientado a Objetos
+% Aluno: João Vítor Fernandes Dias
+
+\chapterimage{requisitos.jpg} % Table of contents heading image
+\chapter{Requisitos do Sistema OO}
+
+
+Neste capítulo é apresentado listas, definições e especificações de Requisitos do sistema ser desenvolvido. Os requisitos são declarações abstratas de alto nível sobre os \textit{serviços} que o sistema deve prestar à organização, e as \textit{restrições} sobre as quais deve operar. Os requisitos sempre refletem as necessidades dos clientes do sistema.
+
+Sobre os requisitos,  Raul S. Wazlawick afirma:
+\begin{citadireta}
+    A \textit{etapa de levantamento de requisitos} corresponde a buscar todas as informações possíveis sobre as funções que o sistema deve executar e as restrições sobre as quais o sistema deve operar. O produto dessa etapa será o documento de requisitos, principal componente do anteprojeto de software.
+    
+    A \textit{etapa de análise de requisitos} serve para estruturar e detalhar os requisitos de forma que eles possam ser abordados na fase de elaboração para o desenvolvimento  de outros elementos como casos de uso, classes e interfaces.
+    
+    O levantamento de requisitos é o processo de descobrir quais são as \textit{funções} que o sistema deve realizar e quais são as \textit{restrições} que existem sobre estas funções  \cite{Wazlawick2011}.
+\end{citadireta}
+
+
+
+    \section{Requisitos Funcionais}
+        Os requisitos funcionais representam quais são as características e ações disponíveis pelo sistema para que ele opere como esperado.
+        \subsection{Subsistema de Cadastro}
+            Ator: usuário.
+            Ponto de partida: Tela de cadastro.
+            \begin{enumerate}
+                \item Acessar o site
+                \item Selecionar a caixa de texto de e-mail
+                \item Clicar em avançar
+                \item Selecionar a caixa de texto de senha
+                \item Clicar em avançar
+                \item \textit{Conta foi criada com sucesso}
+                \item \textbf{Redirecionamento para a tela principal do site}
+            \end{enumerate}
+        \subsection{Subsistema de Login}
+            Ator: usuário.
+            Ponto de partida: Tela de cadastro.
+            \begin{enumerate}
+                \item Acessa o site
+                \item Selecionar a caixa de texto de e-mail
+                \item Clicar em avançar
+                \item Selecionar a caixa de texto de senha
+                \item Clicar em avançar
+                \item \textit{Conta autenticada com sucesso}
+                \item \textbf{Redirecionamento para a tela principal do site}
+            \end{enumerate}
+        \subsection{Subsistema de Criação de Objetos}
+            Ator: usuário.
+            Ponto de partida: Tela principal.
+            \begin{enumerate}
+                \item Clicar no botão de adicionar tags
+                \item \textbf{Redirecionamento para a tela de adição de tags}
+                \item Preencher os campos principais
+                \begin{enumerate}
+                    \item Nome
+                    \item Sub-tags
+                    \item Tags
+                \end{enumerate}
+                \item Clicar em confirmar criação
+                \item \textit{Objeto criado com sucesso}
+            \end{enumerate}
+        \subsection{Subsistema de Busca de Tags}
+            Ator: usuário.
+            Ponto de partida: Tela principal.
+            \begin{enumerate}
+                \item Clicar no botão de buscar Tags
+                \item \textbf{Redirecionamento para a tela de busca de tags}
+                \item Digitar tags válidas
+                \item Procurar dentre as tags encontradas
+                \item \textit{Tag encontrada com sucesso}
+            \end{enumerate}
+
+    \section{Requisitos Não-Funcionais} % Revisar referência % Adicionar textinho para cada subseção
+        “Os requisitos não funcionais são aqueles não diretamente relacionados às funções específicas fornecidas pelo sistema” (SOMMERVILLE, 2007).
+        
+        \subsection{Requisitos de Usabilidade}
+            \begin{enumerate}
+                \item O sistema deve apresentar menos de 10 botões por página
+                \item O sistema deve contar com uma paleta de cores tendendo ao preto
+                \item Todos os botões devem ser facilmente identificáveis
+            \end{enumerate}
+        \subsection{Requisitos de Confiabilidade}
+            \begin{enumerate}
+                \item Caso haja falha de conexão, o usuário precisa ser informado na mesma hora
+                \item Tudo que o usuário fizer no modo offline deverá ser guardado para ser executado quando retornar à conexão
+                \item O usuário deve ser informado caso alguma de suas ações não tiverem tido efeito
+            \end{enumerate}
+        \subsection{Requisitos de Disponibilidade}
+            \begin{enumerate}
+                \item O sistema deve estar online o tempo todo
+                \item Rotinas de checagem de falhas e erros devem rodar continuamente em busca de problemas
+                \item Em caso de falha catastrófica, os usuários devem ser notificados e o sistema deve voltar ao ar em menos de uma hora
+            \end{enumerate}
+        \subsection{Requisitos de Privacidade}
+            \begin{enumerate}
+                \item Todos os dados inseridos pelo usuário na plataforma poderão ser utilizados pelo sistema como bem entender
+                \item O Sistema não pode ultrapassar os direitos do uso dos dados dos países cujas leis de dados o afetem
+                \item O usuário poderá ter a opção de não ceder dado algum
+            \end{enumerate}
+        \subsection{Requisitos de Acesso}
+            \begin{enumerate}
+                \item Apenas usuários cadastrados poderão interagir com o sistema de tags
+                \item Gestores do sistema poderão manualmente apagar tags que foram criadas inadequadamente
+                \item Gestores do sistema poderão manualmente criar novas tags
+            \end{enumerate}
+
+     \section{Requisitos de Negócios}
+         Requisitos do negócio são requisitos de alto nível que explicam e justificar qualquer projeto. Os requisitos de negócios são as atividades críticas de uma empresa que devem ser executadas para atender ao(s) objetivo(s) organizacional(is) enquanto permanecem independentes do sistema solução.
+
+        \begin{enumerate}
+            \item Proporcionar aos usuários uma forma estruturada de acessar informações e filtrar diversos objetos que sejam de seu interesse
+            \item Tornar o conceito de tags natural e intuitivo para os usuários do sistema
+            \item Sempre ser capaz de comportar novas tags e novas associações de dados 
+            \item Mesmo durante manutenções o sistema deve manter ativo
+        \end{enumerate}
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+    \title{Projetos de Desenvolvimento}	%	TITLE PAGE
+    \author{Dr. Ausberto S. Castro Vera}
+    
+    \begingroup
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+    \coordinate [below=12cm] (midpoint) at (current page.north);
+    \node at (current page.north west)
+    {\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt] at (0,0)
+            {\includegraphics[width=\paperwidth]{Pictures/Ausberto/0_capa.png}}; %Capa Imagem A4 21x29.7
+    \draw[anchor=north] (midpoint) node [fill=azulao!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]
+              {\paperwidth}
+              {\centering Sistema Acadêmico\\[10pt] % Titulo Livro
+              {\huge\it João Vítor Fernandes Dias - Ausberto Silverio Castro Vera}\\[10pt]
+              {\large UENF - CCT - LCMAT - CC}\\[10pt]
+              {\large \today}
+              }
+            }; % Titulo - Autor
+    \end{tikzpicture}};
+    \end{tikzpicture}
+    \vfill
+    \endgroup

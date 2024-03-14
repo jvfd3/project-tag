@@ -1,0 +1,20 @@
+#1  Tela de apresentação
+
+#2  Tela de cadastro
+
+#3  Tela inicial
+
+#4  Tela de perfil pessoal
+
+#5  Tela de tags pessoais
+
+#6  Tela de busca
+
+#7  Tela de ranking de tags
+
+#8  Tela de conversas
+
+#9  Tela de conversa
+
+#10 Tela de convites
+      Fulano se interessou pelas suas tags X, Y e Z

@@ -1,0 +1,125 @@
+\chapterimage{Pictures/Ausberto/09_Implementacao.jpg}
+
+\chapter{Implementação do Sistema OO} % Fazer listagens
+
+Neste capítulo serão apresentados fragmentos do código utilizado na implementação. Também serão mostradas as classes utilizadas e o processo necessário para a instalação do sistema.
+
+\section{Programação}
+    Listar:
+    \begin{itemize}
+        \item Todas as classes implementadas na linguagem OO (sem os métodos)
+                
+            \begin{enumerate}
+                \item TagWholePage
+                \item HeaderComponentClass
+                \item PageTitle
+                \item HandmadeRouter
+                \item MainPage
+                \item AddTagPage
+                \item TagCreationHolder
+                \item SelfPage
+                \item SelfImage
+                \item SelfUserContent
+                \item AboutPage
+                \item SignInPage
+                \item UserSignForm
+                \item SearchTagPage
+                \item TagTable
+                \item FooterComponentClass
+            \end{enumerate}
+
+        \item Todos os módulos ou subsistemas (diagramas ou arquitetura implementada)
+
+            Cada classe foi colocada em um módulo diferente que atua semi-independentemente dos outros módulos. Assim, poderia-se dizer que os módulos seriam aqueles já mostrados na enumeração \ref{Classes}.
+    
+            
+        \item Partes importantes do código fonte implementado
+        
+            \lstinputlisting[language=JavaScript, caption=Cabeçalho, label={code0}]{Codes/Components/header.tsx}
+
+                No código \ref{code0} é criado o cabeçalho e seus botões.
+            
+            \lstinputlisting[language=JavaScript, label={code1}, caption=Sobre]{Codes/Pages/about.tsx}
+
+                No código \ref{code1} é criada a página sobre, dispondo do símbolo do curso de computação e de informações pertinentes.
+            
+            \lstinputlisting[language=JavaScript, label={code2}, caption=Adicionar Tags]{Codes/Pages/add.tsx}
+
+                No código \ref{code2} é desenvolvida a página referente à adição de tags.
+            
+            \lstinputlisting[language=JavaScript, label={code3}, caption=Pesquisa]{Codes/Pages/search.tsx}
+
+                No código \ref{code3} é criada a página que exemplifica a pesquisa por tags já criadas.
+            
+            \lstinputlisting[language=JavaScript, label={code4}, caption=Informações do usuário]{Codes/Pages/self.tsx}
+
+                No código \ref{code4} é criada a página que exemplifica a apresentação dos dados do usuário.
+            
+            \lstinputlisting[language=JavaScript, label={code5}, caption=Formulário de login]{Codes/Pages/signIn.tsx}
+
+                No código \ref{code5} é criada a página de login e cadastro.
+            
+            \lstinputlisting[language=JavaScript, label={code6}, caption=Sub formulário de login]{Codes/Components/form.tsx}
+
+                No código \ref{code6} é criado o formulário necessário para login e cadastro.
+            
+        \item As bases de dados implementadas
+            \lstinputlisting[language=JavaScript, label={code7}, caption=Banco de dados de tags]{Codes/Databases/db_tags.json}
+
+                O código \ref{code7} é referente ao banco de dados base utilizado referente às tags.
+            
+            \lstinputlisting[language=JavaScript, label={code8}, caption=Banco de dados de usuários]{Codes/Databases/db_username_password.json}
+
+                O código \ref{code8} é referente ao banco de dados base utilizado para armazenar as contas de usuários.
+            
+        
+    \end{itemize}
+
+\section{Documentação do Software}
+
+    Indicar e explicar:
+    \begin{itemize}
+        \item \textbf{Manual de Instalação}: O que é necessário para instalar o sistema desenvolvido (banco de dados, versão, bibliotecas, etc.)
+        
+            Para fazer a instalação, primeiro é necessário fazer a instalação do NodeJS pelo \href{https://nodejs.org/en/}{\textbf{site oficial}} ou diretamente através \href{https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi}{\textbf{deste link}}.
+            
+            \begin{enumerate}
+                \item execute o arquivo.
+                \item Clique em Next
+                \item Leia os termos
+                \item Clique na checkbox caso concorde com os termos
+                \item Clique em Next
+                \item Clique em Next
+                \item Clique em Next
+                \item Clique em Next
+                \item Clique em Install
+                \item Caso apareça um aviso do Windows, Clique em Sim
+                \item Clique em Finish
+            \end{enumerate}
+    
+            Agora, quanto ao código:
+            \begin{enumerate}
+                \item Faça o download dos arquivos contidos \href{https://github.com/jvfd3/project-tag/archive/refs/heads/main.zip}{neste link}
+                \item extrai os arquivos para uma pasta de preferência
+                \item Navegue pelas pastas: project-tag
+                \item Ao entrar na pasta tag, pressione shift e clique com botão direito na pasta 
+                \item Selecione a opção "abrir botão do power shell"
+                \item ao abrir a tela, execute o comando "npm install"
+                \item Depois execute o comando "npm start"
+            \end{enumerate}
+
+            Se tudo der certo, dentro de alguns instantes uma página do navegador aparecerá para que você possa mexer no sistema.
+        \begin{comment}
+            
+        \item \textbf{Manual do usuário}: Os passos básicos para utilizar o sistema (inicializar, salvar, imprimir, etc.)
+        \item \textbf{Outros}....
+        \end{comment}
+    \end{itemize}
+
+\begin{comment}
+    Prof. Dr. Ausberto S. Castro Vera
+    UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computação
+    Campos, RJ, 2022 
+    Disciplina: Paradigma de Desenvolvimento Orientado a Objetos
+    Aluno: João Vítor Fernandes Dias
+\end{comment}
