@@ -1,30 +1,16 @@
 # Project Tag
 
-<details> <summary>
-
 ## Introduction
-
-</summary>
 
 This project is both an [university][UENFSite] and [personal project][MyRepositories].
 [I][MyGitHub] idealized this project as a way of categorizing anything.
 The goal is to help the world to organize it's data and be able to search for them more directly and specifically.
 
-</details>
-
-<details> <summary>
-
 ## To-Do List
-
-</summary>
 
 Here will be listed things that I still want to do with this repository.
 
-<details> <summary>
-
 ### File Structure
-
-</summary>
 
 - [ ] Add more things to this readme
 - [ ] Create a pt-br readme
@@ -35,11 +21,7 @@ Here will be listed things that I still want to do with this repository.
   - Dense Repo
   - Everything
 
-</details> <details> <summary>
-
 ### Misc
-
-</summary>
 
 - [ ] Learn
   - [ ] About TypeScript Interfaces
@@ -76,7 +58,7 @@ Here will be listed things that I still want to do with this repository.
       - [ ] State Machine (3)
   - [ ] [All][UMLDiagrams]
     - [ ] Structure
-      - [ ] Class *
+      - [ ] Class \*
       - [ ] Component
       - [ ] Deployment
       - [ ] Object
@@ -84,25 +66,18 @@ Here will be listed things that I still want to do with this repository.
       - [ ] Profile
       - [ ] Composite Structure
     - [ ] Behavioral
-      - [ ] Use Case *
-      - [ ] Activity *
-      - [ ] State Machine *
-      - [ ] Sequence *
+      - [ ] Use Case \*
+      - [ ] Activity \*
+      - [ ] State Machine \*
+      - [ ] Sequence \*
       - [ ] Communication
       - [ ] Interaction Overview
       - [ ] Timing
 - [ ] Create actual docstrings
 
-</details> </details>
-<details> <summary>
-
 ## WIP
 
-</summary>
-
 WIP
-
-</details>
 
 [MyGitHub]: github.com/jvfd3
 [MyRepositories]: github.com/jvfd3?tab=repositories
