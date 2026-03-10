@@ -81,7 +81,7 @@ class UserSignForm extends React.Component<any, any> {
     this.setState({ isLogged: true });
   }
   render() {
-    const { username, password/* , rememberMe */ } = this.state;
+    // const { username, password/* , rememberMe */ } = this.state;
     return (
       <div className='Capsule2 SignFormContainer'>
         <form className='SignForm' onSubmit={this.onSubmit}>

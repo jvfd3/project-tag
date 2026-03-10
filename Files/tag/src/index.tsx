@@ -13,7 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import TagWholePage from './handmade/routes/defaultpage';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './src/handmade/Styles/jv_styles.css';
+import './handmade/Styles/jv_styles.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

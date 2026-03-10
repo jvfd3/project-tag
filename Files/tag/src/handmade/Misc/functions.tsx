@@ -9,7 +9,7 @@
       novembro de 2022.
 */
 
-import React from 'react';
+// import React from 'react';
 /*  ToDo:
 1.
   Estou tentando salvar coisas em arquivo há mais de 2 horas. Desisto

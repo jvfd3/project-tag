@@ -16,7 +16,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import MainPage from '../pages/main';
+// import MainPage from '../pages/main';
 import SelfPage from '../pages/self';
 import AboutPage from '../pages/about';
 import AddTagPage from '../pages/add';
